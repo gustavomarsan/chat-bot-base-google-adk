@@ -7,6 +7,7 @@ Terminal-based chat agent using Google Agent Development Kit (ADK).
 - Interactive terminal-based chat interface
 - Context-aware conversations using Google ADK sessions
 - Automatic model fallback for resilience
+- Markdown-rendered agent responses in the terminal
 - Configurable via environment variables
 - Clean exit handling (Ctrl+C, `/exit`)
 
@@ -68,9 +69,9 @@ uv run pytest
 ├── src/chat_agent/
 │   ├── __init__.py
 │   ├── config.py      # Configuration and validation
-│   ├── agent.py       # ADK agent wrapper (TODO)
-│   ├── app.py         # Chat application loop (TODO)
-│   └── __main__.py    # Entry point (TODO)
+│   ├── agent.py       # ADK agent wrapper
+│   ├── app.py         # Chat application loop and Markdown output
+│   └── __main__.py    # Entry point
 ├── tests/
 │   └── test_config.py # Configuration tests
 ├── prompts/

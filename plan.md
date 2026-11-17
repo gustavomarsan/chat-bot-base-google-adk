@@ -51,7 +51,7 @@ You: /exit
 Goodbye.
 ```
 
-**Output Formatting:** Agent responses are rendered as markdown for improved readability (bold text, numbered lists, code blocks). This requires the optional `rich` library. Without it, responses display as plain text.
+**Output Formatting:** Agent responses are rendered as Markdown for improved readability (bold text, numbered lists, and code blocks) using the `rich` library.
 
 ---
 ## 4. Requirements
@@ -246,7 +246,7 @@ The implementation may use a single module initially if that is enough, but it s
 
 ## 9.1 Supporting Files
 
-**pyproject.toml**: Use `google-adk>=1.18,<2.0`, `python-dotenv>=1.0.0`, optional `rich>=13.0.0` for markdown output. Dev dependencies: `pytest>=7.0.0`, `pytest-asyncio>=0.21.0` for async tests.
+**pyproject.toml**: Use `google-adk>=1.18,<2.0`, `python-dotenv>=1.0.0`, and `rich>=13.0.0` for Markdown output. Dev dependencies: `pytest>=7.0.0`, `pytest-asyncio>=0.21.0` for async tests.
 
 **.env.example**: Copy from Section 7.
 

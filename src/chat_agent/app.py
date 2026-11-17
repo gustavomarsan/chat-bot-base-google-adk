@@ -5,6 +5,9 @@ import signal
 import sys
 from typing import Optional
 
+from rich.console import Console
+from rich.markdown import Markdown
+
 from .agent import ChatAgent
 
 
@@ -19,6 +22,7 @@ class ChatApplication:
             agent: Configured ChatAgent instance
         """
         self.agent = agent
+        self.console = Console()
         self._running = False
         self._setup_signal_handlers()
 
@@ -72,8 +76,10 @@ class ChatApplication:
             # Send message to agent
             response = await self.agent.send_message(user_message)
 
-            # Display response
-            print(f"Agent: {response}\n")
+            # Display response as terminal-rendered Markdown.
+            self.console.print("Agent:")
+            self.console.print(Markdown(response))
+            self.console.print()
 
         except Exception as e:
             # Display error but keep session alive
